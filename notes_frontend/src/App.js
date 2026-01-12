@@ -16,7 +16,7 @@ import {
  * - Two-pane layout: notes list (left) and editor/viewer (right)
  * - CRUD for notes (title, content)
  * - Persists to localStorage
- * - No backend calls; environment variables like REACT_APP_API_BASE are ignored
+ * - No backend calls
  */
 
 // PUBLIC_INTERFACE
