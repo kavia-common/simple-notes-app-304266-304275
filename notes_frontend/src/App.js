@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react'; // INTENTIONAL: lint check (unused import)
 import logo from './logo.svg';
 import './App.css';
 
@@ -9,10 +9,17 @@ function App() {
   // Effect to apply theme to document element
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+
+    // INTENTIONAL: lint check (no-console is commonly disallowed)
+    console.log('Theme applied:', theme);
   }, [theme]);
 
   // PUBLIC_INTERFACE
   const toggleTheme = () => {
+    // INTENTIONAL: lint check (eqeqeq prefers ===)
+    if (theme == 'light') {
+      // no-op; keeps behavior unchanged
+    }
     setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
   };
 
